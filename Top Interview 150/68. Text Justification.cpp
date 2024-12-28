@@ -26,8 +26,8 @@ public:
 
         int l = line.size();
         if (line.find_first_of(" ") == string::npos) {
-            int num_of_spaces = max_l - l;
-            while (num_of_spaces--) line += " ";
+            int diff = max_l - line.size();
+            line.append(diff, ' ');
         } else {
             int index = 0;
             while (l < max_l) {
